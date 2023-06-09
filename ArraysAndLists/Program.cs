@@ -12,36 +12,21 @@ namespace ArraysAndLists
             // Create an int Array and populate numbers 1-10
 
             int[] myArray01 = new int[10];
+            
+            for (int i = 0; i < 10; i++)
             {
-                for (int i = 0; i < 10; i++)
-                {
-                    myArray01[i] = i + 1;
-                }
+                myArray01[i] = i + 1;
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                /* Create two Lists of type int.
-                 * Name one List "evens"
-                 * 
-                 * 
-                 * Name the other List "odds"
-                 * 
-                 */
-                List<int> evens = new List<int>();
-                List<int> odds = new List<int>();
+            /* Create two Lists of type int.
+                * Name one List "evens"
+                * 
+                * 
+                * Name the other List "odds"
+                * 
+                */
+            List<int> evens = new List<int>();
+            List<int> odds = new List<int>();
 
 
 
@@ -54,17 +39,17 @@ namespace ArraysAndLists
                  * Then add those numbers to either the evens List
                  * or the odds List
                  */
-                for (int i = 0; i < myArray01.Length; i++)
+            for (int i = 0; i < myArray01.Length; i++)
+            {
+                if (myArray01[i] % 2 == 0)
                 {
-                    if (myArray01[i] % 2 == 0)
-                    {
-                        evens.Add(myArray01[i]);
-                    }
-                    else
-                    {
-                        odds.Add(myArray01[i]);
-                    }
+                    evens.Add(myArray01[i]);
                 }
+                else
+                {
+                    odds.Add(myArray01[i]);
+                }
+            }
 
 
                 /* Now using foreach or for loops,
@@ -72,17 +57,15 @@ namespace ArraysAndLists
                  *
                  * Try to be creative in your display
                  */
-                foreach (var num1 in evens)
-                {
-                    Console.WriteLine(num1);
-                }
-
-                foreach (var num1 in odds)
-                {
-                    Console.WriteLine(num1);
-                }
+            foreach (var num1 in evens)
+            {
+                Console.WriteLine(num1);
             }
 
+            foreach (var num1 in odds)
+            {
+                Console.WriteLine(num1);
+            }
         }
     }
 }
